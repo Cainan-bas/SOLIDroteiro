@@ -12,16 +12,33 @@ import java.util.List;
  */
 public class CalculadoraPreco {
     
-    public double calcularTotal(List<String> itens) {
+    // public double calcularTotal(List<String> itens) {
+    //     double total = 0;
+    //     for (String item : itens) {
+    //         if (item.equals("Pizza")) {
+    //             total += 30.0;
+    //         } else if (item.equals("Bebida")) {
+    //             total += 10.0;
+    //         }
+    //     }
+    //     return total;
+    // }
+
+    public double calcularTotal(List<String> itens){
         double total = 0;
-        for (String item : itens) {
-            if (item.equals("Pizza")) {
-                total += 30.0;
-            } else if (item.equals("Bebida")) {
+        double desconto = 0;
+        for(String item : itens){
+            if(item.equals("Pizza")){ 
+                total+=30.0; 
+                desconto = 0.1;
+            }
+            else if (item.equals("Bebida")){
                 total += 10.0;
+                if (desconto != 0)desconto = 0.15;
             }
         }
-        return total;
+        
+        return total - (total*desconto);
     }
     
 }
