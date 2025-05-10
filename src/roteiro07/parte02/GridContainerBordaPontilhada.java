@@ -1,16 +1,15 @@
 package roteiro07.parte02;
 
 import java.util.Arrays;
-//import java.util.List;
 
-public class GridContainer extends Container {
+public class GridContainerBordaPontilhada extends Container {
     private Component[][] elements;
     private int lineCounter = 0;
     private int columnCounter = 0;
     private int ColumnMax;
     private int lineMax;
 
-    public GridContainer(int lineMax, int ColumnMax) {
+    public GridContainerBordaPontilhada(int lineMax, int ColumnMax) {
         this.lineMax = lineMax;
         this.ColumnMax = ColumnMax;
         this.elements = new Component[lineMax][ColumnMax];
@@ -45,7 +44,8 @@ public class GridContainer extends Container {
 
     @Override
     public void doLayout() {
-        System.out.println("O Container utilizado é o GridContainer");
+        System.out.println("O Container utilizado é o GridContainer ");
+        System.out.println("Este container contêm bordas pontilhadas");
         System.out.println("Estes são os elementos presentes no container");
         System.out.println(Arrays.deepToString(elements));
         System.out.println("Usando o método dispose como herança para fechar o container");
@@ -53,4 +53,3 @@ public class GridContainer extends Container {
         System.out.println("--------------------------------");
     }
 }
-    
