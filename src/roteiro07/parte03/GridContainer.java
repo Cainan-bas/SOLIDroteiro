@@ -1,10 +1,10 @@
-package roteiro07.parte01;
+package roteiro07.parte03;
 
 import java.util.Arrays;
 //import java.util.List;
 
 public class GridContainer extends Container {
-    private Component[][] elements;
+    protected Component[][] elements;
     private int lineCounter = 0;
     private int columnCounter = 0;
     private int ColumnMax;
